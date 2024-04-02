@@ -22,7 +22,7 @@ import org.springframework.orm.hibernate5.HibernateTransactionManager;
  * @author admin
  */
 @Configuration
-@PropertySource("classpath:database.properties")
+@PropertySource("classpath:databases.properties")
 public class HibernateConfigs {
 
     @Autowired

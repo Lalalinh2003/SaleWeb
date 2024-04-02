@@ -6,6 +6,7 @@ package com.ptpl.controllers;
 
 import com.ptpl.services.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -14,13 +15,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
  *
  * @author admin
  */
+@Controller
 public class HomeController {
     @Autowired
-    private CategoryService cateServices;
+    private CategoryService cateService;
     
     @RequestMapping("/")
     public String index(Model model) {
-        model.addAttribute("categories", this.cateServices.getCates());
+        model.addAttribute("categories", this.cateService.getCates());
         return "index";
     }
     
