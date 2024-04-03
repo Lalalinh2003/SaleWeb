@@ -31,7 +31,7 @@ public class WebAppContextConfig implements WebMvcConfigurer {
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
         configurer.enable();
     }
-    
+    /*
     @Bean
     public InternalResourceViewResolver internalResourceViewResolver() {
         InternalResourceViewResolver r = new InternalResourceViewResolver();
@@ -40,5 +40,5 @@ public class WebAppContextConfig implements WebMvcConfigurer {
         r.setPrefix(".jsp");
         
         return r;
-    }
+    }*/
 }
