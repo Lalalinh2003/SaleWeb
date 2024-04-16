@@ -35,7 +35,6 @@ public class IndexController {
     
     @RequestMapping("/")
     public String index(Model model, @RequestParam Map<String, String> params) {      
-        model.addAttribute("categories", this.cateService.getCates());
         model.addAttribute("products", this.prodService.getProduct(params));
         return "index";
     }
